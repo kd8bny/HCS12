@@ -1,0 +1,76 @@
+#ifndef VECTORS12_H
+#define VECTORS12_H
+
+/* Interupt vectors relocated in RAM by boot loader and DBUG-12
+ * in DRAGON-12. These are set at runtime. */
+
+
+//#ifndef VECTOR_BASE
+#define VECTOR_BASE 0x3E00
+//#endif
+
+#define _VEC16(off)      *(volatile unsigned short *)(VECTOR_BASE + off*2)
+
+#define   UserRsrv0x80 _VEC16(0)
+#define   UserRsrv0x82 _VEC16(1)
+#define   UserRsrv0x84 _VEC16(2)
+#define   UserRsrv0x86 _VEC16(3)
+#define   UserRsrv0x88 _VEC16(4)
+#define   UserRsrv0x8a _VEC16(5)
+#define   UserPWMShDn _VEC16(6)
+#define   UserPortP _VEC16(7)
+#define   UserMSCAN4Tx _VEC16(8)
+#define   UserMSCAN4Rx _VEC16(9)
+#define   UserMSCAN4Errs _VEC16(10)
+#define   UserMSCAN4Wake _VEC16(11)
+#define   UserMSCAN3Tx _VEC16(12)
+#define   UserMSCAN3Rx _VEC16(13)
+#define   UserMSCAN3Errs _VEC16(14)
+#define   UserMSCAN3Wake _VEC16(15)
+#define   UserMSCAN2Tx _VEC16(16)
+#define   UserMSCAN2Rx _VEC16(17)
+#define   UserMSCAN2Errs _VEC16(18)
+#define   UserMSCAN2Wake _VEC16(19)
+#define   UserMSCAN1Tx _VEC16(20)
+#define   UserMSCAN1Rx _VEC16(21)
+#define   UserMSCAN1Errs _VEC16(22)
+#define   UserMSCAN1Wake _VEC16(23)
+#define   UserMSCAN0Tx _VEC16(24)
+#define   UserMSCAN0Rx _VEC16(25)
+#define   UserMSCAN0Errs _VEC16(26)
+#define   UserMSCAN0Wake _VEC16(27)
+#define   UserFlash _VEC16(28)
+#define   UserEEPROM _VEC16(29)
+#define   UserSPI2 _VEC16(30)
+#define   UserSPI1 _VEC16(31)
+#define   UserIIC _VEC16(32)
+#define   UserDLC _VEC16(33)
+#define   UserSCME _VEC16(34)
+#define   UserCRG _VEC16(35)
+#define   UserPAccBOv _VEC16(36)
+#define   UserModDwnCtr _VEC16(37)
+#define   UserPortH _VEC16(38)
+#define   UserPortJ _VEC16(39)
+#define   UserAtoD1 _VEC16(40)
+#define   UserAtoD0 _VEC16(41)
+#define   UserSCI1 _VEC16(42)
+#define   UserSCI0 _VEC16(43)
+#define   UserSPI0 _VEC16(44)
+#define   UserPAccEdge _VEC16(45)
+#define   UserPAccOvf _VEC16(46)
+#define   UserTimerOvf _VEC16(47)
+#define   UserTimerCh7 _VEC16(48)
+#define   UserTimerCh6 _VEC16(49)
+#define   UserTimerCh5 _VEC16(50)
+#define   UserTimerCh4 _VEC16(51)
+#define   UserTimerCh3 _VEC16(52)
+#define   UserTimerCh2 _VEC16(53)
+#define   UserTimerCh1 _VEC16(54)
+#define   UserTimerCh0 _VEC16(55)
+#define   UserRTI _VEC16(56)
+#define   UserIRQ _VEC16(57)
+#define   UserXIRQ _VEC16(58)
+#define   UserSWI _VEC16(59)
+#define   UserTrap _VEC16(60)
+
+#endif
